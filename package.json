@@ -1,0 +1,16 @@
+{
+  "name": "dsh-session-mailbox",
+  "version": "1.0.0",
+  "description": "File-based mailbox and push notification between DSH sessions, resolved per workspace",
+  "license": "MIT",
+  "author": "MARECHAL GAO Ewen marechal.ewen@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ewen-marechal-gao/dsh-session-mailbox.git"
+  },
+  "keywords": ["dsh", "deepseek-harness", "plugin", "session", "mailbox", "inter-session", "notification"],
+  "main": "index.js",
+  "files": ["index.js", "cordis.patch.yml", "README.md", "LICENSE"],
+  "exports": { ".": "./index.js" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

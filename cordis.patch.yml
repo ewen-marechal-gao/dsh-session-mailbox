@@ -1,0 +1,13 @@
+# Bundle patch for `dsh-session-mailbox`.
+#
+# Mount point: the profile composes this patch once the bundle is listed in
+# package.json -> "dsh": { "profile": { "bundles": [ ..., "dsh-session-mailbox" ] } }.
+#
+# No project-specific path: the plugin resolves the mailbox from the WORKSPACE
+# of the session that runs the tool (ctx.agents.currentInitiator()?.session.header.cwd).
+# Default: `_dsh-mailbox` at the root of that workspace. An absolute `folder`
+# override is possible but not required.
+- insert:
+    - id: session-mailbox
+      name: 'dsh-session-mailbox'
+      config: {}
